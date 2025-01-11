@@ -1,8 +1,5 @@
 package com.company.TopInterview150;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i = m+n-1; i > -1; i--) {

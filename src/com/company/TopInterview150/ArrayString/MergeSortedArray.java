@@ -1,4 +1,4 @@
-package com.company.TopInterview150;
+package com.company.TopInterview150.ArrayString;
 
 public class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

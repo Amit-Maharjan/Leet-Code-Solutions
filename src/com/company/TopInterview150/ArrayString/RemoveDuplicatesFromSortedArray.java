@@ -1,4 +1,4 @@
-package com.company.TopInterview150;
+package com.company.TopInterview150.ArrayString;
 
 public class RemoveDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {

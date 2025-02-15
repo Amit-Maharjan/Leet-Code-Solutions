@@ -12,7 +12,7 @@ public class MinimumNumberOfArrowsToBurstBalloons {
             int[] curr = points[i];
             if (prev[1] >= curr[0]) {
                 count--;
-                prev[0] = Math.max(prev[0], curr[0]);
+                prev[0] = curr[0];
                 prev[1] = Math.min(prev[1], curr[1]);
             } else {
                 prev = curr;

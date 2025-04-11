@@ -1,18 +1,18 @@
 package com.company.TopInterview150.Trie;
 
 public class ImplementTriePrefixTree2 {
-    TreeNode root;
+    Node root;
 
     public ImplementTriePrefixTree2() {
-        root = new TreeNode();
+        root = new Node();
     }
 
     public void insert(String word) {
-        TreeNode curr = root;
+        Node curr = root;
         for (char c : word.toCharArray()) {
             int index = c-'a';
             if (curr.children[index]==null) {
-                curr.children[index] = new TreeNode();
+                curr.children[index] = new Node();
             }
             curr = curr.children[index];
         }
@@ -20,7 +20,7 @@ public class ImplementTriePrefixTree2 {
     }
 
     public boolean search(String word) {
-        TreeNode curr = root;
+        Node curr = root;
         for (char c : word.toCharArray()) {
             int index = c-'a';
             if (curr.children[index]==null) return false;
@@ -30,7 +30,7 @@ public class ImplementTriePrefixTree2 {
     }
 
     public boolean startsWith(String prefix) {
-        TreeNode curr = root;
+        Node curr = root;
         for (char c : prefix.toCharArray()) {
             int index = c-'a';
             if (curr.children[index]==null) return false;
@@ -38,14 +38,14 @@ public class ImplementTriePrefixTree2 {
         }
         return true;
     }
-}
 
-class TreeNode {
-    TreeNode[] children;
-    boolean endNode;
+    class Node {
+        Node[] children;
+        boolean endNode;
 
-    TreeNode() {
-        children = new TreeNode[26];
-        endNode = false;
+        Node() {
+            children = new Node[26];
+            endNode = false;
+        }
     }
 }

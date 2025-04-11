@@ -36,9 +36,9 @@ public class ImplementTriePrefixTree {
         }
         return true;
     }
-}
 
-class Node {
-    Map<Character, Node> childern = new HashMap<>();
-    boolean endNode = false;
+    class Node {
+        Map<Character, Node> childern = new HashMap<>();
+        boolean endNode = false;
+    }
 }
